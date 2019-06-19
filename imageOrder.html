@@ -24,6 +24,27 @@
           </ul>
       </div>
       <script>
+      	const params = document.querySelector('.paramoteur');
+      	const mult = document.querySelector('.multiaxe');
+
+      	const afficherParam = () => {
+      		params.style.display = 'block';
+      		mult.style.display = 'none';
+      	};
+
+      	const afficherMult = () => {
+      		params.style.display = 'none';
+      		mult.style.display = 'block';
+      	};
+
+      	const afficherAll = () => {
+      		params.style.display = 'block';
+      		mult.style.display = 'block';
+      	};
+
+      	document.getElementById('paramoteur').addEventListener('click', afficherParam);
+      	document.getElementById('multiaxe').addEventListener('click', afficherMult);
+      	document.getElementById('all').addEventListener('click', afficherAll);
         //TODO
         //1 - Séléctionner l'éléments HTML 'bouton paramoteur' avec querySelector et le mettre dans une variable.
         //2 - Séléctionner la liste ul 'multiaxe' avec querySelector et la mettre dans une variable.
