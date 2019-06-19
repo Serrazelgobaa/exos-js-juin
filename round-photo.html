@@ -11,8 +11,16 @@
         <br> (voir round-photo.html)
       </p>
     </div>
-      <div style="display: inline-block; text-align: center;" id="photo1"><img src="./assets/images/round-photo/photo1.jpg" width="60%"></div>
+      <div style="display: inline-block; text-align: center;" id="photo1"><img src="./assets/images/round-photo/photo1.jpg" width="60%" class="carre"></div>
     <script>
+      const photo = document.querySelector('img');
+
+      const arrondir = () => {
+        photo.classList.toggle('rond');
+        photo.classList.toggle('carre');
+      };
+
+      photo.addEventListener('click', arrondir);
     //TODO
     </script>
   </body>
